@@ -1,0 +1,25 @@
+SECOM STATISTICAL ROBUSTNESS AND SENSITIVITY REPORT
+Student: Gabilan
+Student ID: TUPM-26-2636
+Random Seed: 262636
+Seed Digit: 6
+Bootstrap Repetitions: 260
+Selected Features: Feature_011, Feature_048, Feature_114, Feature_339, Feature_474
+Largest Change in Mean Difference: 0.0226 (Feature_474)
+Features with Changed Difference Sign: None
+Features with Changed Ranking: None
+Features with Changed CI Conclusion (excludes zero): None
+Reproducibility Verified: True
+
+Per-feature results (Fail - Pass mean difference, 95% percentile CI):
+- Feature_011: available-case -0.0016 [-0.0040, 0.0004] rank 2; median-imputed -0.0016 [-0.0040, 0.0004] rank 2
+- Feature_048: available-case -0.2773 [-1.2613, 0.5878] rank 4; median-imputed -0.2773 [-1.2613, 0.5879] rank 4
+- Feature_114: available-case 0.0005 [-0.0001, 0.0012] rank 1; median-imputed 0.0005 [-0.0001, 0.0012] rank 1
+- Feature_339: available-case 0.7294 [-0.2989, 2.4627] rank 3; median-imputed 0.7286 [-0.2988, 2.4612] rank 3
+- Feature_474: available-case 1.4715 [-3.4103, 7.7790] rank 5; median-imputed 1.4940 [-3.3859, 7.7970] rank 5
+
+Interpretation Notes:
+- Median imputation pulls missing values toward the center, so it can shrink group differences relative to available-case analysis.
+- A confidence interval that excludes zero shows a stable difference in the resampled data, not a cause of failure.
+- Rankings use absolute standardized differences because raw scales differ between features.
+- Results are descriptive and do not establish prediction accuracy.
